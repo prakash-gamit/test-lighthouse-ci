@@ -12,7 +12,9 @@ module.exports = {
       target: 'temporary-public-storage',
     },
     assert: {
-      preset: 'lighthouse:recommended',
+      "assertions": {
+        "categories:performance": ["warn", {"minScore": 80}],
+      },
     },
   },
 };
